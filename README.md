@@ -131,7 +131,7 @@ MIT
 
 ## Author
 
-Tung Nguyen ([@tunghtml](https://github.com/finnwasabi))
+Tung Le ([@tunghtml](https://github.com/finnwasabi))
 
 ## Contributing
 
