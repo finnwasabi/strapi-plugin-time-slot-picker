@@ -1,0 +1,53 @@
+{
+  "name": "@tunghtml/strapi-plugin-time-slot-picker",
+  "version": "1.0.0",
+  "description": "A Strapi custom field plugin for selecting time slots across multiple dates with an intuitive UI",
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "custom-field",
+    "time-slot",
+    "time-picker",
+    "scheduling",
+    "calendar"
+  ],
+  "homepage": "https://github.com/finnwasabi/strapi-plugin-time-slot-picker#readme",
+  "bugs": {
+    "url": "https://github.com/finnwasabi/strapi-plugin-time-slot-picker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finnwasabi/strapi-plugin-time-slot-picker.git"
+  },
+  "strapi": {
+    "name": "time-slot-picker",
+    "displayName": "Time Slot Picker",
+    "description": "Custom field for selecting time slots",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^2.0.0-rc.14",
+    "@strapi/icons": "^2.0.0-rc.14"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "author": {
+    "name": "Tung Nguyen",
+    "email": "tunghtml@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "Tung Nguyen",
+      "email": "tunghtml@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
