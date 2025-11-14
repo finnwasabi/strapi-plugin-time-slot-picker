@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Button, Field } from "@strapi/design-system";
+import { Button, Field, Checkbox } from "@strapi/design-system";
 import { Box } from "@strapi/design-system";
 import { Typography } from "@strapi/design-system";
 import { Flex } from "@strapi/design-system";
@@ -36,7 +36,7 @@ const SlotColumn = styled.div`
   gap: ${({ theme }) => theme.spaces[2]};
 `;
 
-const SlotLabel = styled.label`
+const SlotLabel = styled(Box)`
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.spaces[2]} ${({ theme }) => theme.spaces[3]};
@@ -56,27 +56,6 @@ const SlotLabel = styled.label`
       checked ? theme.colors.primary200 : theme.colors.neutral150};
     border-color: ${({ theme, checked }) =>
       checked ? theme.colors.primary600 : theme.colors.neutral300};
-  }
-
-  input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    accent-color: ${({ theme }) => theme.colors.primary600};
-  }
-`;
-
-const HeaderCheckbox = styled.label`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spaces[2]};
-  cursor: pointer;
-
-  input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: ${({ theme }) => theme.colors.primary600};
   }
 `;
 
@@ -323,14 +302,13 @@ const TimeSlotInput = ({
       {selectedDates.map((date) => (
         <DateSection key={date}>
           <DateHeader>
-            <HeaderCheckbox>
-              <input
-                type="checkbox"
+            <Flex gap={2} alignItems="center">
+              <Checkbox
                 checked={isAllSelected(date)}
-                onChange={() => toggleAllSlots(date)}
+                onCheckedChange={() => toggleAllSlots(date)}
               />
               <Typography fontWeight="bold">{formatDateLabel(date)}</Typography>
-            </HeaderCheckbox>
+            </Flex>
             <IconButton onClick={() => removeDate(date)} label="Remove date">
               <Trash />
             </IconButton>
@@ -348,10 +326,9 @@ const TimeSlotInput = ({
               </Typography>
               {config.morningSlots.map((slot) => (
                 <SlotLabel key={slot} checked={isSlotSelected(date, slot)}>
-                  <input
-                    type="checkbox"
+                  <Checkbox
                     checked={isSlotSelected(date, slot)}
-                    onChange={() => toggleSlot(date, slot)}
+                    onCheckedChange={() => toggleSlot(date, slot)}
                   />
                   <Typography variant="omega">{slot}</Typography>
                 </SlotLabel>
@@ -369,10 +346,9 @@ const TimeSlotInput = ({
               </Typography>
               {config.afternoonSlots.map((slot) => (
                 <SlotLabel key={slot} checked={isSlotSelected(date, slot)}>
-                  <input
-                    type="checkbox"
+                  <Checkbox
                     checked={isSlotSelected(date, slot)}
-                    onChange={() => toggleSlot(date, slot)}
+                    onCheckedChange={() => toggleSlot(date, slot)}
                   />
                   <Typography variant="omega">{slot}</Typography>
                 </SlotLabel>

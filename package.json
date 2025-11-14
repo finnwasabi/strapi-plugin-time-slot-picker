@@ -1,6 +1,6 @@
 {
   "name": "@tunghtml/strapi-plugin-time-slot-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Strapi custom field plugin for selecting time slots across multiple dates with an intuitive UI",
   "keywords": [
     "strapi",
