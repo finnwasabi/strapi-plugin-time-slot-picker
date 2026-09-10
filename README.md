@@ -141,3 +141,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 If you encounter any issues, please report them at:
 https://github.com/finnwasabi/strapi-plugin-time-slot-picker/issues
+
+---
+
+Built by **Tung Le**. More Strapi plugins and case studies at [tungln.is-a.dev](https://tungln.is-a.dev).

@@ -1,6 +1,6 @@
 {
   "name": "@tunghtml/strapi-plugin-time-slot-picker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Strapi custom field plugin for selecting time slots across multiple dates with an intuitive UI",
   "keywords": [
     "strapi",
@@ -36,8 +36,9 @@
     "styled-components": "^6.0.0"
   },
   "author": {
-    "name": "Tung Nguyen",
-    "email": "tunghtml@gmail.com"
+    "name": "Tung Le",
+    "email": "nhattung1511@gmail.com",
+    "url": "https://tungln.is-a.dev"
   },
   "maintainers": [
     {
