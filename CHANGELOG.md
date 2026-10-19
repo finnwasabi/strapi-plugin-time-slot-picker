@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4] - 2026-10-19
+
+### Fixed
+
+- Clicking a slot checkbox no longer submits the Content Manager form: the wrapping `<button>` is now `type="button"`
+- Selected slots follow the stored value when it changes from outside (another entry loaded, form reset)
+
+### Changed
+
+- Maintainer contact updated to Tung Le <nhattung1511@gmail.com>
+
 ## [1.1.0] - 2025-01-05
 
 ### Added

@@ -2,7 +2,7 @@ import { Checkbox, Field, Grid } from '@strapi/design-system';
 import { Box } from '@strapi/design-system';
 import { Typography } from '@strapi/design-system';
 import { Flex } from '@strapi/design-system';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
@@ -111,6 +111,14 @@ const TimeSlotInput = ({
   const initialData = parseInitialValue();
   const selectedDates = initialData.selectedDates;
   const [dateSlots, setDateSlots] = useState(initialData.dateSlots);
+
+  // Follow values set from outside (another entry loaded, form reset) so toggles start from them
+  useEffect(() => {
+    const synced = parseInitialValue().dateSlots;
+    setDateSlots((current) =>
+      JSON.stringify(current) === JSON.stringify(synced) ? current : synced
+    );
+  }, [value]);
 
   const handleChange = (dates, slots) => {
     const days = dates.map((date) => ({
@@ -257,7 +265,7 @@ const TimeSlotInput = ({
                       tabIndex={0}
                       aria-pressed={isSlotSelected(date, slot)}
                     >
-                      <button onClick={(e) => e.stopPropagation()}>
+                      <button type="button" onClick={(e) => e.stopPropagation()}>
                         <Checkbox
                           checked={isSlotSelected(date, slot)}
                           onCheckedChange={() => toggleSlot(date, slot)}
@@ -292,7 +300,7 @@ const TimeSlotInput = ({
                       tabIndex={0}
                       aria-pressed={isSlotSelected(date, slot)}
                     >
-                      <button onClick={(e) => e.stopPropagation()}>
+                      <button type="button" onClick={(e) => e.stopPropagation()}>
                         <Checkbox
                           checked={isSlotSelected(date, slot)}
                           onCheckedChange={() => toggleSlot(date, slot)}
