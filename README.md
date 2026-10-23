@@ -1,5 +1,10 @@
 # Strapi Plugin Time Slot Picker
 
+> [!IMPORTANT]
+> **This plugin has moved to [Strapi Field Kit](https://github.com/finnwasabi/strapi-field-kit/tree/main/packages/time-slot-picker).**
+> Version 2.0 and later are developed there; please open issues and pull requests in that repository.
+> The npm package name is unchanged, and 1.x releases stay installable. See the [upgrade notes](https://github.com/finnwasabi/strapi-field-kit/tree/main/packages/time-slot-picker#upgrading-from-1x).
+
 A custom field plugin for Strapi v5 that allows users to select time slots across multiple dates with an intuitive and beautiful UI.
 
 ![Time Slot Picker](https://img.shields.io/npm/v/@tunghtml/strapi-plugin-time-slot-picker)
